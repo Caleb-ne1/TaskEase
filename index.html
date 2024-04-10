@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo list</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div>
+            <button class="button" id="createTaskButton" onclick="closeLightbox()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"
+                    class="svg-icon">
+                    <g stroke-width="2" stroke-linecap="round" stroke="#fff">
+                        <rect y="5" x="4" width="16" rx="2" height="16"></rect>
+                        <path d="m8 3v4"></path>
+                        <path d="m16 3v4"></path>
+                        <path d="m4 11h16"></path>
+                    </g>
+                </svg>
+                <span class="lable">create a task</span>
+            </button>
+        </div>
+
+        <div class="right">
+            <button class="btn" id="calendarButton">
+                <img src="./images/calendar_6764694.png" alt="">
+            </button>
+            <button class="btn" id="tasksButton">
+                <img src="./images/tasks_7083585.png" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div id="taskLightbox" class="lightbox">
+        <div class="create-task">
+            <div class="modal-content">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <h3>Add Task</h3>
+                <input type="text" id="taskName" placeholder="Task Name"><br><br>
+                <label for="Date">Date</label>
+                <input type="date" id="date"><br><br>
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime"><br><br>
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime"><br><br>
+                <button type="button" class="save-button" id="save-button">
+                    <span class="button__text">Save Task</span>
+                    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                            height="24" fill="none" class="svg">
+                            <line y2="19" y1="5" x2="12" x1="12"></line>
+                            <line y2="12" y1="12" x2="19" x1="5"></line>
+                        </svg></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="calendar" id="calendarSection">
+        <div class="header">
+            <button id="prevBtn">&lt;</button>
+            <h2 id="monthAndYear"></h2>
+            <button id="nextBtn">&gt;</button>
+        </div>
+        <table id="calendarTable">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+
+    <div class="view-tasks" id="viewTasksSection" style="display: none;">
+        <h2>Today</h2>
+        <hr>
+        <div id="todayTasks">
+            <!-- Tasks for today will be displayed here -->
+        </div>
+
+        <h2>Upcoming</h2>
+        <hr>
+        <div id="upcomingTasks">
+            <!-- Upcoming tasks will be displayed here -->
+        </div>
+
+        <h2>Completed</h2>
+        <hr>
+        <div id="completedTasks">
+            <!-- Completed tasks will be displayed here -->
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
