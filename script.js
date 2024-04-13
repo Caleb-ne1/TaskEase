@@ -1,18 +1,3 @@
-setTimeout(function() {
-  var loader = document.querySelector('.container');
-  loader.classList.add('hidden');
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'index.html', true);
-  xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-          document.open();
-          document.write(xhr.responseText);
-          document.close();
-      }
-  };
-  xhr.send();
-}, 10000);
-
 document.addEventListener("DOMContentLoaded", function () {
   const calendarBody = document.getElementById("calendarBody");
   const monthAndYear = document.getElementById("monthAndYear");
