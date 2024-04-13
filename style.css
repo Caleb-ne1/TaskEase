@@ -230,6 +230,16 @@ body {
 #monthAndYear {
   font-size: 24px;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: center;
+}
 
 #prevBtn,
 #nextBtn {
