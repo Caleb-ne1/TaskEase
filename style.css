@@ -231,17 +231,6 @@ body {
   font-size: 24px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  padding: 10px;
-  text-align: center;
-}
-
 #prevBtn,
 #nextBtn {
   background: none;
@@ -298,3 +287,71 @@ table td {
   flex-direction: row;
   width: 100%;
 }
+
+
+.support {
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  border-radius: 300px;
+  background-color: rgb(31, 31, 31);
+  color: #F5F5F5;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(3, 169, 244, .7);
+}
+
+.Btn {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .4s;
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(31, 31, 31);
+  overflow: hidden;
+}
+
+.svgIcon {
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  font-weight: 600;
+  opacity: 0;
+  transition-duration: .4s;
+}
+
+.text a {
+  text-decoration: none;
+  color: white;
+}
+
+.Btn:hover {
+  width: 110px;
+  transition-duration: .4s;
+  border-radius: 30px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
